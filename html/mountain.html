@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/kuga.jpg" />
+    <title>Xe đạp leo núi</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../boxicons-2.1.1/css/boxicons.min.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/moutain.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+
+  <body>
+    <header class="navbar navbar-expand-lg" id="header">
+      <div class="container-fluid">
+        <a href="../index.html" class="logo">
+          <img src="../images/TuaBike.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="navbar-toggler-icon bx bx-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-lg-0 ps-4">
+            <li class="nav-item fs-3">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="electric.html">Xe điện</a>
+            </li>
+            <li class="nav-item fs-3 active">
+              <a class="nav-link active" href="mountain.html">Xe leo núi</a>
+            </li>
+
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="profile.html">Khác</a>
+            </li>
+          </ul>
+          <form class="d-flex m-4">
+            <input
+              class="form-control me-2 rounded-1"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn search"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              Tìm
+            </button>
+          </form>
+          <div class="user-menu m-4">
+            <a href="../html/cart.html" class="cart"
+              ><i class="pe-2 fs-4 bx bx-shopping-bag"></i>
+            </a>
+            <a class="login">
+              <i class="pe-2 fs-4 bx bx-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" style="margin-top: 120px">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="slideshow">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner" style="height: 18rem">
+                <div class="carousel-item active">
+                  <img
+                    src="../images/mountain/show1.jpg"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/mountain/show2.png"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/mountain/show3.png"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <nav aria-label="Page navigation">
+            <ul
+              class="pagination pagination-lg row no-gutters justify-content-center"
+            >
+              <li class="page-item col-lg-2 col-auto">
+                <button
+                  class="snip1575"
+                  data-filter="All"
+                  onclick="changeProduct('All',this)"
+                >
+                  Tất cả
+                </button>
+              </li>
+              <li class="page-item col-lg-2 col-auto">
+                <button
+                  class="snip1575"
+                  data-filter="Cross"
+                  onclick="changeProduct('Cross',this)"
+                >
+                  Đường dốc
+                </button>
+              </li>
+              <li class="page-item col-md-2 col-auto">
+                <button
+                  class="snip1575"
+                  data-filter="Trail"
+                  onclick="changeProduct('Trail',this),hien()"
+                >
+                  Đường mòn
+                </button>
+              </li>
+              <li class="page-item col-md-2 col-auto">
+                <button
+                  class="snip1575"
+                  data-filter="Enduro"
+                  onclick="changeProduct('Enduro',this),hien()"
+                >
+                  Đường rừng
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 mb-4" id="trail">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Cross">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/1.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 680</h3>
+                  <span class="product-price">23.000.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Cross">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/2.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 720</h3>
+                  <span class="product-price"> 15.600.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Cross">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/3.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 900</h3>
+                  <span class="product-price">12.360.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 mb-4">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Cross">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/4.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 100</h3>
+                  <span class="product-price">18.000.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="showsp btn w-25 mx-auto mb-2"
+          style="text-align: center"
+          onclick="hien()"
+        >
+          Xem thêm
+        </button>
+
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Trail">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/5.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 101</h3>
+                  <span class="product-price">9.300.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Trail">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/6.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 102</h3>
+                  <span class="product-price"> 11.000.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Trail">
+              <div class="product-card Trail">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/7.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 103</h3>
+                  <span class="product-price"> 16.082.231 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Trail">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/8.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 104</h3>
+                  <span class="product-price"> 36.587.300 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Enduro">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/9.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 105</h3>
+                  <span class="product-price"> 33.763.900 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Enduro">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/10.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 106</h3>
+                  <span class="product-price"> 23.659.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Enduro">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/11.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 107</h3>
+                  <span class="product-price"> 18.690.000 đồng</span>
+                </a>
+                <button class="btn add snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 hide">
+          <div class="card border-0 shadow rounded-xs">
+            <div class="card-body Enduro">
+              <div class="product-card">
+                <a href="notfound.html">
+                  <div class="product-card-img">
+                    <img src="../images/mountain/12.png" alt="No" />
+                  </div>
+                  <h3 class="product-name">MTB 108</h3>
+                  <span class="product-price"> 13.900.000 đồng</span>
+                </a>
+                <button class="btn add snip1535 snip1535">Thêm vào giỏ hàng</button>
+                <button
+                  class="view btn-primary btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#view"
+                >
+                  <i class="bx bx-low-vision"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="right col-lg-3 mb-3">
+            <a href="../index.html">
+              <img src="../images/TuaBike.png" alt="" />
+            </a>
+          </div>
+          <div class="left col-lg-9 mb-3">
+            <div class="widget widget-newsletter">
+              <div class="newsletter-info me-5">
+                <h4 class="widget-title font-weight-bold">
+                  Theo dõi bản tin mới của TuaBike
+                </h4>
+                <p>
+                  Nhận tất cả thông tin mới nhất về sự kiện và ưu đãi.
+                </p>
+              </div>
+              <form action="#" class="input-wrapper input-wrapper-inline">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address here..."
+                  id="email"
+                  name="email"
+                />
+                <button
+                  class="btn btn-primary m-0 font-weight-bold"
+                  type="submit"
+                >
+                  Đặt mua
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-middle">
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">Thông tin liên lạc</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <label>Số điện thoại: </label>
+                  <a href="#">Tổng đài hỗ trợ miễn phí: (123) 456-7890</a>
+                </li>
+                <li class="mb-3">
+                  <label>EMAIL: </label>
+                  <a href="#">mail@donal.com</a>
+                </li>
+                <li class="mb-3">
+                  <label>ĐỊA CHỈ </label>
+                  <a href="#">123 Đường số 4, Phường 5, Quận 6, Tp.HCM, Việt Nam</a>
+                </li>
+                <li class="mb-3">
+                  <label>NGÀY/GIỜ LÀM VIỆC</label>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Thứ hai - Chủ nhật / 9:00 - 20:00</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">TÀI KHOẢN</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <a href="#">KHÁC</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Lịch sử mua hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Trả hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">dịch vụ khách hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Điều khoản và dịch vụ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">Thông tin liên lạc</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <a href="#">Khác</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Lịch sử mua hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Trả hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Dịch vụ khách hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Điều khoản và dịch vụ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">INSTAGRAM</h4>
+              <figure class="widget-body row">
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/01.jpg"
+                    alt="instagram 1"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/02.jpg"
+                    alt="instagram 2"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/03.jpg"
+                    alt="instagram 3"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/04.jpg"
+                    alt="instagram 4"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/05.jpg"
+                    alt="instagram 5"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/06.jpg"
+                    alt="instagram 6"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/07.jpg"
+                    alt="instagram 7"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/08.jpg"
+                    alt="instagram 8"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-lg-4">
+            <figure>
+              <img src="../images/payment.png" alt="payment" />
+            </figure>
+          </div>
+          <div class="col-lg-4">
+            <p>Phan Minh Trí</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/tizqhann/"
+                class="social-link social-facebook bx bxl-facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <a
+                href="https://twitter.com/"
+                class="social-link social-twitter bx bxl-twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/codedao20/"
+                class="social-link social-linkedin bx bxl-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="view"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="margin-top: 8rem">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body"></div>
+          <button data-bs-dismiss="modal" class="add">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="to-header">
+      <i class="bx bx-chevron-up"></i>
+    </a>
+  </body>
+  <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/mountain.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.hide').hide()
+    })
+  </script>
+</html>

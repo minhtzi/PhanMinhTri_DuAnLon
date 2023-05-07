@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/kuga.jpg" />
+
+    <title>Đăng nhập</title>
+
+    <link rel="stylesheet" href="./boxicons-2.1.1/css/boxicons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../boxicons-2.1.1/css/boxicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <section id="section">
+      <div class="box">
+        <div class="square" style="--i: 0"></div>
+        <div class="square" style="--i: 1"></div>
+        <div class="square" style="--i: 2"></div>
+        <div class="square" style="--i: 3"></div>
+        <div class="square" style="--i: 4"></div>
+        <div class="container">
+          <div class="form">
+            <h2>ĐĂNG NHẬP</h2>
+            <form id="form">
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  id="fullname"
+                  name="fullname"
+                />
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  name="password"
+                />
+                <span class="form-message"></span>
+              </div>
+              <div class="form-group">
+                <button type="submit">Đăng nhập</button>
+              </div>
+              <p class="forget">Bạn quên mật khẩu? <a href="#">Tại đây</a></p>
+              <p class="forget">
+                Bạn chưa có tài khoản? <a href="signup.html">Đăng ký</a>
+              </p>
+            </form>
+            <div class="other">
+              <h2>Hoặc đăng nhập bằng</h2>
+              <div class="social-links">
+                <a
+                  href="https://www.facebook.com/"
+                  class="social-link social-facebook bx bxl-facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                </a>
+                <a
+                  href="https://twitter.com/"
+                  class="social-link social-twitter bx bxl-twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+                <a
+                  href="https://www.google.com/gmail/"
+                  class="social-link social-google bx bxl-google"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/validation.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      Validator({
+        form: '#form',
+        formGroupSeletor: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy dủ của bạn'),
+
+          Validator.isRequired('#password', 'Vui lòng nhập trường này'),
+          Validator.isPassword('#password', 2)
+        ],
+        onSubmit: (data) => {
+          let store = JSON.parse(localStorage.getItem('user'))
+          console.log(store)
+
+          store == null
+            ? alert('Tài khoản không khả dụng')
+            : user.fullname == store.fullname && user.password == store.password
+            ? alert('Đăng nhập thành công')(
+                (window.location.href = '../index.html')
+              )
+            : alert('Tên đăng nhập hoặc mật khẩu không đúng')
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/kuga.jpg" />
+
+    <title>Xe điện</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="../boxicons-2.1.1/css/boxicons.min.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/electric.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg" id="header">
+      <div class="container-fluid">
+        <a href="../index.html" class="logo">
+          <img src="../images/TuaBike.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="navbar-toggler-icon bx bx-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-lg-0 ps-4">
+            <li class="nav-item fs-3">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="nav-item fs-3 active">
+              <a class="nav-link active" href="electric.html">Xe điện</a>
+            </li>
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="mountain.html">Xe leo núi</a>
+            </li>
+
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="profile.html">Khác</a>
+            </li>
+          </ul>
+          <form class="d-flex m-4">
+            <input
+              class="form-control me-2 rounded-1"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn search"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              Tìm
+            </button>
+          </form>
+          <div class="user-menu m-4">
+            <a href="../html/cart.html" class="cart"
+              ><i class="pe-2 fs-4 bx bx-shopping-bag"></i>
+            </a>
+            <a class="login">
+              <i class="pe-2 fs-4 bx bx-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="slideshow">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner" style="height: 18rem">
+            <div class="carousel-item active">
+              <img src="../images/electric/2.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="../images/electric/1.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="../images/electric/3.png" class="d-block w-100" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- grid bên dưới -->
+      <div class="row category">
+        <div class="col-md-4">
+          <div class="box">
+            <div class="box-img">
+              <img
+                src="../images/electric/xedienanhbia.jpg"
+                alt=""
+                style="height: 220px; width: 100%"
+              />
+            </div>
+            <div class="box_cnt">
+              <p class="title1">Sản phẩm mới</p>
+              <p class="title2"><strong>Tất cả sản phẩm</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="box-img">
+              <img
+                src="../images/electric/xedienanhbia2.jpg"
+                alt=""
+                style="height: 220px; width: 100%"
+              />
+            </div>
+            <div class="box_cnt">
+              <p class="title1">Sản phẩm mới</p>
+              <p class="title2"><strong>Phụ tùng xe</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="box-img">
+              <img
+                src="../images/electric/xedienanhbia3.jpg"
+                alt=""
+                style="height: 220px; width: 100%"
+              />
+            </div>
+            <div class="box_cnt">
+              <p class="title1">Sản phẩm mới</p>
+              <p class="title2"><strong>Phụ kiện cho người đi</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="welcome">Chào mừng bạn đến với TuaBike</h2>
+      <p class="subwelcome">
+        Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+        người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+        Để trở thành một phương tiện giao thông hoàn thiện như ngày nay, xe đạp đã trải qua một lịch sử phát triển với hàng loạt các cải tiến của nhiều nhà phát minh. 
+        Mời các bạn cùng TuaBike khám phá nhiều mẫu mã mới nhất của xe đạp nhé.
+      </p>
+      <hr />
+      <div class="sort">
+        <span>Nổi bật:</span>
+        <ul class="sort-list">
+          <li class="sort-active">Tất cả</li>
+          <li>Trả góp 0%</li>
+          <li>Giá tầm trung</li>
+          <li>Giá cao</li>
+        </ul>
+      </div>
+      <div class="row products">
+        <div class="col-lg-3">
+          <div class="product-card m-3">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Xe đạp leo núi</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 14.636.900 đồng </span>
+                    <span>
+                      <strike class="remove"> 18.861.000 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Xe bánh to</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 13.642.000 đồng </span>
+                    <span>
+                      <strike class="remove"> 22.345.300 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3 installment">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Xe đạp trẻ em</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 7.181.700 đồng </span>
+                    <span>
+                      <strike class="remove"> 9.915.000 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Xe đạp GT</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 14.885.500 đồng </span>
+                    <span>
+                      <strike class="remove"> 19.855.000 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3 installment">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Xe đạp Salse</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 9.666.000 đồng </span>
+                    <span>
+                      <strike class="remove"> 17.370.000 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name"> Xe đạp Kona</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 14.636.000 đồng </span>
+                    <span>
+                      <strike class="remove"> 24.825.500 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3 installment">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Xe đạp Ibis</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 14.636.000 đồng </span>
+                    <span>
+                      <strike class="remove"> 17.370.400 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="product-card m-3">
+            <a href="notfound.html">
+              <div class="product-card-img">
+                <img src="../images/electric/xetrong1.jpg" alt="No" />
+              </div>
+              <div class="overlay">
+                <p class="product-name">Orbea</p>
+                <b>
+                  <p class="price">
+                    <span class="product-price"> 12.151.800 đồng </span>
+                    <span>
+                      <strike class="remove"> 17.370.000 đồng </strike>
+                    </span>
+                  </p>
+                </b>
+              </div>
+              <div class="sales">
+                <span>Giảm<br>giá</span>
+              </div>
+            </a>
+            <button class="btn mt-2 add">Thêm vào giỏ hàng</button>
+            <button
+              class="view btn mt-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              <i class="bx bx-low-vision"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 30px 0; text-align: center">
+        <button href="" class="btn_mod1" id="see-more">Xem thêm</button>
+      </div>
+    </div>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="right col-lg-3 mb-3">
+            <a href="../index.html">
+              <img src="../images/TuaBike.png" alt="" />
+            </a>
+          </div>
+          <div class="left col-lg-9 mb-3">
+            <div class="widget widget-newsletter">
+              <div class="newsletter-info me-5">
+                <h4 class="widget-title font-weight-bold">
+                  Theo dõi bản tin mới của TuaBike
+                </h4>
+                <p>
+                  Nhận tất cả thông tin mới nhất về sự kiện và ưu đãi.
+                </p>
+              </div>
+              <form action="#" class="input-wrapper input-wrapper-inline">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address here..."
+                  id="email"
+                  name="email"
+                />
+                <button
+                  class="btn btn-primary m-0 font-weight-bold"
+                  type="submit"
+                >
+                  Đặt mua
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-middle">
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">THÔNG TIN LIÊN LẠC</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <label>SỐ ĐIỆN THOẠI: </label>
+                  <a href="#">Tổng đài hỗ trợ miễn phí: (123) 456-7890</a>
+                </li>
+                <li class="mb-3">
+                  <label>EMAIL: </label>
+                  <a href="#">mail@donal.com</a>
+                </li>
+                <li class="mb-3">
+                  <label>ĐỊA CHỈ: </label>
+                  <a href="#"> 123 Đường số 4, Phường 5, Quận 6, Tp.HCM, Việt Nam</a>
+                </li>
+                <li class="mb-3">
+                  <label>THỜI GIAN LÀM VIỆC: </label>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Thứ hai - Chủ nhật / 9:00 - 20:00</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">TÀI KHOẢN</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <a href="#">KHÁC</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Lịch sử mua hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Trả hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Dịch vụ khách hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Các điều khoản và dịch vụ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">THÔNG TIN LIÊN LẠC</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <a href="#">KHÁC</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Lịch sử mua hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Trả hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Dịch vụ khách hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Điều khoản và dịch vụ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">INSTAGRAM</h4>
+              <figure class="widget-body row">
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/01.jpg"
+                    alt="instagram 1"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/02.jpg"
+                    alt="instagram 2"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/03.jpg"
+                    alt="instagram 3"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/04.jpg"
+                    alt="instagram 4"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/05.jpg"
+                    alt="instagram 5"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/06.jpg"
+                    alt="instagram 6"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/07.jpg"
+                    alt="instagram 7"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="../images/instagram/08.jpg"
+                    alt="instagram 8"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-lg-4">
+            <figure>
+              <img src="../images/payment.png" alt="payment" />
+            </figure>
+          </div>
+          <div class="col-lg-4">
+            <p>Phan Minh Trí</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/tizqhann/"
+                class="social-link social-facebook bx bxl-facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <a
+                href="https://twitter.com/"
+                class="social-link social-twitter bx bxl-twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/codedao20/"
+                class="social-link social-linkedin bx bxl-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="view"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="margin-top: 8rem">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body"></div>
+          <button data-bs-dismiss="modal" class="add">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="to-header">
+      <i class="bx bx-chevron-up"></i>
+    </a>
+  </body>
+  <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/electric.js"></script>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="boxicons-2.1.1/css/boxicons.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <header class="navbar navbar-expand-lg" id="header">
+      <div class="container-fluid">
+        <a href="index.html" class="logo">
+          <img src="images/TuaBike.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="navbar-toggler-icon bx bx-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-lg-0 ps-4">
+            <li class="nav-item fs-3">
+              <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+            </li>
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="html/electric.html">Xe điện</a>
+            </li>
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="html/mountain.html">Xe leo núi</a>
+            </li>
+
+            <li class="nav-item fs-3">
+              <a class="nav-link" href="#">Khác</a>
+            </li>
+          </ul>
+          <form class="d-flex m-4">
+            <input
+              class="form-control me-2 rounded-1"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn search"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#view"
+            >
+              Tìm
+            </button>
+          </form>
+          <div class="user-menu m-4">
+            <a href="html/cart.html" class="cart"
+              ><i class="pe-2 fs-4 bx bx-shopping-bag"></i>
+            </a>
+            <a class="login">
+              <i class="pe-2 fs-4 bx bx-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="slide-container" id="banner-slide">
+        <div class="slide active">
+          <div class="slide-txt">
+            <div class="slide-title">
+              <h3>Giới thiệu</h3>
+            </div>
+            <div class="slide-description">
+              <p>
+              Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+              người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+              </p>
+            </div>
+            <div class="slide-btn">
+              <a href="html/notfound.html" class="btn banner-btn">Mua ngay </a>
+            </div>
+          </div>
+          <div class="slide-img">
+            <img src="images/home/bike4.png" alt="No" />
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-txt">
+            <div class="slide-title">
+              <h3>Giới thiệu</h3>
+            </div>
+            <div class="slide-description">
+              <p>
+            Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+            người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+              </p>
+            </div>
+            <div class="slide-btn">
+              <a href="html/notfound.html" class="btn banner-btn"> Mua ngay </a>
+            </div>
+          </div>
+          <div class="slide-img">
+            <img src="images/home/bike2.png" alt="No" />
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-txt">
+            <div class="slide-title">
+              <h3>Giới thiệu</h3>
+            </div>
+            <div class="slide-description">
+              <p>
+                Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+                người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+              </p>
+            </div>
+            <div class="slide-btn">
+              <a href="html/notfound.html" class="btn banner-btn"> Mua ngay </a>
+            </div>
+          </div>
+          <div class="slide-img">
+            <img src="images/home/b1.png" alt="No" />
+          </div>
+        </div>
+
+        <div class="banner-txt">Xe của bạn</div>
+
+        <ul class="slide-control">
+          <li class="slide-prev"><i class="bx bx-chevron-left"></i></li>
+          <li class="slide-control-item active"></li>
+          <li class="slide-control-item"></li>
+          <li class="slide-control-item"></li>
+          <li class="slide-next"><i class="bx bx-chevron-right"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <h3 class="second-title">Sản phẩm</h3>
+        <h3 class="main-title">Phong cách của bạn</h3>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="category-img">
+              <a class="category-img-inner" href="#">
+                <img src="images/home/topic1.jpg" alt="no" />
+                <div class="category-title">
+                  <h3>Xe đạp thường</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="category-img">
+              <a class="category-img-inner" href="#">
+                <img src="images/home/topic2.jpg" alt="no" />
+                <div class="category-title">
+                  <h3>Xe leo núi</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="category-img">
+              <a class="category-img-inner" href="#">
+                <img src="images/home/topic3.jpg" alt="no" />
+                <div class="category-title">
+                  <h3>Xe đua đường dài</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <h3 class="second-title">Sản phẩm mới</h3>
+        <h3 class="main-title">Kiểu dáng lạ</h3>
+        <div class="btn-wrapper">
+          <a href="html/notfound.html" class="btn-hover">Xem tất cả sản phẩm</a>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-lg-5 d-flex align-items-center">
+            <div class="product-card product-card-large">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/bike3.png" alt="No" />
+                </div>
+                <h3 class="product-name">Xe đạp hành trình</h3>
+                <span class="product-price"> 23.973.100 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-7 col-sm-12">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="product-card">
+                  <a href="html/notfound.html">
+                    <div class="product-card-img">
+                      <img src="images/home/b2.png" alt="No" />
+                    </div>
+                    <h3 class="product-name">Xe bánh lớn</h3>
+                    <span class="product-price"> 20.282.800 đồng </span>
+                  </a>
+                  <button class="btn add">Thêm vào giỏ hàng</button>
+                  <button
+                    class="view btn-primary btn"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#view"
+                  >
+                    <i class="bx bx-low-vision"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="product-card">
+                  <a href="html/notfound.html">
+                    <div class="product-card-img">
+                      <img src="images/home/bike4.png" alt="No" />
+                    </div>
+                    <h3 class="product-name">Xe đạp YT</h3>
+                    <span class="product-price"> 15.255.000 đồng </span>
+                  </a>
+                  <button class="btn add">Thêm vào giỏ hàng</button>
+                  <button
+                    class="view btn-primary btn"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#view"
+                  >
+                    <i class="bx bx-low-vision"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="product-card">
+                  <a href="html/notfound.html">
+                    <div class="product-card-img">
+                      <img src="images/home/b1.png" alt="No" />
+                    </div>
+                    <h3 class="product-name">Xe đạp GT</h3>
+                    <span class="product-price"> 15.640.000 đồng</span>
+                  </a>
+                  <button class="btn add">Thêm vào giỏ hàng</button>
+                  <button
+                    class="view btn-primary btn"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#view"
+                  >
+                    <i class="bx bx-low-vision"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="product-card">
+                  <a href="html/notfound.html">
+                    <div class="product-card-img">
+                      <img src="images/home/bike1.png" alt="No" />
+                    </div>
+                    <h3 class="product-name"> Xe đạp Salsa</h3>
+                    <span class="product-price"> 14.860.500 đồng </span>
+                  </a>
+                  <button class="btn add">Thêm vào giỏ hàng</button>
+                  <button
+                    class="view btn-primary btn"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#view"
+                  >
+                    <i class="bx bx-low-vision"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section special-section">
+      <div class="section-title">
+        <input type="text" class="discount" disabled />
+        <h3 class="second-title">Ưu đãi lớn</h3>
+        <h3 class="main-title">Xe đạp sườn ngang</h3>
+        <div class="special-price">3.980.000 đồng</div>
+        <a href="#" class="btn">Mua ngay</a>
+      </div>
+      <div class="special-img">
+        <img src="images/home/bike2.png" alt="No" />
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <h3 class="second-title">Sự lựa chọn của khách hàng</h3>
+        <h3 class="main-title">Xe đạp phổ biến</h3>
+        <div class="btn-wrapper">
+          <a href="html/notfound.html" class="btn-hover">Tất cả sản phẩm</a>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/bike2.png" alt="No" />
+                </div>
+                <h3 class="product-name">Xe đạp Kona</h3>
+                <span class="product-price"> 17.831.400 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/bike3.png" alt="No" />
+                </div>
+                <h3 class="product-name">Xe đạp Ibis</h3>
+                <span class="product-price"> 14.736.200 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/b2.png" alt="No" />
+                </div>
+                <h3 class="product-name"> Xe đạp Orbea</h3>
+                <span class="product-price"> 20.426.000 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/bike4.png" alt="No" />
+                </div>
+                <h3 class="product-name">Xe đạp Vitus</h3>
+                <span class="product-price"> 24.365.120 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/b1.png" alt="No" />
+                </div>
+                <h3 class="product-name">Xe đạp BMC</h3>
+                <span class="product-price"> 23.526.200 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/bike1.png" alt="No" />
+                </div>
+                <h3 class="product-name"> Xe đạp Bianchi</h3>
+                <span class="product-price"> 24.252.320 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/b2.png" alt="No" />
+                </div>
+                <h3 class="product-name"> Xe Cervélo</h3>
+                <span class="product-price"> 16.226.222 đồng</span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="product-card product-2">
+              <a href="html/notfound.html">
+                <div class="product-card-img">
+                  <img src="images/home/bike2.png" alt="No" />
+                </div>
+                <h3 class="product-name">Xe Ritchey</h3>
+                <span class="product-price"> 15.161.220 đồng </span>
+              </a>
+              <button class="btn add">Thêm vào giỏ hàng</button>
+              <button
+                class="view btn-primary btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#view"
+              >
+                <i class="bx bx-low-vision"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <h3 class="second-title">Sản phẩm mới</h3>
+        <h3 class="main-title">Mới nhất</h3>
+        <div class="btn-wrapper">
+          <a href="html/notfound.html" class="btn-hover">Xem tất cả</a>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="news-card">
+              <a href="html/notfound.html" class="news-card-img">
+                <div class="img-wrapper">
+                  <img src="images/home/review1.jpg" alt="" />
+                </div>
+              </a>
+              <h3 class="news-title">
+                <a href="html/notfound.html">
+                  Đạp xe theo chu kỳ của bạn: Khai thác sức mạnh của nội tiết tố của bạn
+                </a>
+              </h3>
+              <p class="news-preview">
+                Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+                người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+                Để trở thành một phương tiện giao thông hoàn thiện như ngày nay, xe đạp đã trải qua một lịch sử phát triển với hàng loạt các cải tiến của nhiều nhà phát minh. 
+                Mời các bạn cùng TuaBike khám phá nhiều mẫu mã mới nhất của xe đạp nhé.
+              </p>
+              <a href="html/notfound.html" class="btn">Xem thêm</a>
+            </div>
+          </div>
+          <div class="col-lg-4 none">
+            <div class="news-card">
+              <a href="html/notfound.html" class="news-card-img">
+                <div class="img-wrapper">
+                  <img src="images/home/review2.jpg" alt="" />
+                </div>
+              </a>
+              <h3 class="news-title">
+                <a href="html/notfound.html">
+                  Đạp xe theo chu kỳ của bạn: Khai thác sức mạnh của nội tiết tố của bạn
+                </a>
+              </h3>
+              <p class="news-preview">
+                Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+                người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+                Để trở thành một phương tiện giao thông hoàn thiện như ngày nay, xe đạp đã trải qua một lịch sử phát triển với hàng loạt các cải tiến của nhiều nhà phát minh. 
+                Mời các bạn cùng TuaBike khám phá nhiều mẫu mã mới nhất của xe đạp nhé.
+              </p>
+              <a href="html/notfound.html" class="btn">Xem thêm</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="news-card">
+              <a href="html/notfound.html" class="news-card-img">
+                <div class="img-wrapper">
+                  <img src="images/home/review3.jpg" alt="" />
+                </div>
+              </a>
+              <h3 class="news-title">
+                <a href="html/notfound.html">
+                  Đạp xe theo chu kỳ của bạn: Khai thác sức mạnh của nội tiết tố của bạn
+                </a>
+              </h3>
+              <p class="news-preview">
+                Xe đạp là một phương tiện giao thông có lịch sử phát triển lâu đời và trước tình hình chi phí nhiên liệu leo thang, 
+                người ta lại tìm về với xe đạp như một giải pháp vừa tiết kiệm, giảm thiểu ô nhiễm môi trường và cũng là một phương pháp rèn luyện sức khỏe.
+                Để trở thành một phương tiện giao thông hoàn thiện như ngày nay, xe đạp đã trải qua một lịch sử phát triển với hàng loạt các cải tiến của nhiều nhà phát minh. 
+                Mời các bạn cùng TuaBike khám phá nhiều mẫu mã mới nhất của xe đạp nhé.
+              </p>
+              <a href="html/notfound.html" class="btn">Xem thêm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="right col-lg-3 mb-3">
+            <a href="#">
+              <img src="images/TuaBike.png" alt="" />
+            </a>
+          </div>
+          <div class="left col-lg-9 mb-3">
+            <div class="widget widget-newsletter">
+              <div class="newsletter-info me-5">
+                <h4 class="widget-title font-weight-bold">
+                  Theo dõi bản tin mới của TuaBike
+                </h4>
+                <p>
+                  Nhận tất cả thông tin mới nhất về sự kiện và ưu đãi.
+                </p>
+              </div>
+              <form action="#" class="input-wrapper input-wrapper-inline">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address here..."
+                  id="email"
+                  name="email"
+                />
+                <button
+                  class="btn btn-primary m-0 font-weight-bold"
+                  type="submit"
+                >
+                  Đặt mua
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-middle">
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">THÔNG TIN LIÊN LẠC</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <label>SỐ ĐIỆN THOẠI: </label>
+                  <a href="#">Tổng đài hỗ trợ miễn phí: (123) 456-7890</a>
+                </li>
+                <li class="mb-3">
+                  <label>EMAIL: </label>
+                  <a href="#">mail@donal.com</a>
+                </li>
+                <li class="mb-3">
+                  <label>ĐỊA CHỈ: </label>
+                  <a href="#"> 123 Đường số 4, Phường 5, Quận 6, Tp.HCM, Việt Nam</a>
+                </li>
+                <li class="mb-3">
+                  <label>THỜI GIAN LÀM VIỆC: </label>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Thứ hai - Chủ nhật / 9:00 - 20:00</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">TÀI KHOẢN</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <a href="#">KHÁC</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Lịch sử mua hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Trả hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Dịch vụ khách hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Điều khoản & Dịch vụ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">THÔNG TIN LIÊN LẠC</h4>
+              <ul class="widget-body">
+                <li class="mb-3">
+                  <a href="#">KHÁC</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Lịch sử mua hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Trả hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Dịch vụ khách hàng</a>
+                </li>
+                <li class="mb-3">
+                  <a href="#">Điều khoản và Dịch vụ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="widget">
+              <h4 class="widget-title">INSTAGRAM</h4>
+              <figure class="widget-body row">
+                <div class="col-3">
+                  <img
+                    src="images/instagram/01.jpg"
+                    alt="instagram 1"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/02.jpg"
+                    alt="instagram 2"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/03.jpg"
+                    alt="instagram 3"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/04.jpg"
+                    alt="instagram 4"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/05.jpg"
+                    alt="instagram 5"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/06.jpg"
+                    alt="instagram 6"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/07.jpg"
+                    alt="instagram 7"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+                <div class="col-3">
+                  <img
+                    src="images/instagram/08.jpg"
+                    alt="instagram 8"
+                    width="64"
+                    height="64"
+                  />
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-lg-4">
+            <figure>
+              <img src="images/payment.png" alt="payment" />
+            </figure>
+          </div>
+          <div class="col-lg-4">
+            <p>Phan Minh Trí</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/tizqhann/"
+                class="social-link social-facebook bx bxl-facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <a
+                href="https://twitter.com/"
+                class="social-link social-twitter bx bxl-twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/codedao20/"
+                class="social-link social-linkedin bx bxl-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="view"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="margin-top: 10rem">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body"></div>
+          <button data-bs-dismiss="modal" class="add">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="to-header">
+      <i class="bx bx-chevron-up"></i>
+    </a>
+    <script src="js/app.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

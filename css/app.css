@@ -1,0 +1,700 @@
+:root {
+  --main-color: #1d1d1d;
+  --second-color: #3a3a3a;
+  --txt-color: #bbbbbb;
+  --txt-white: #ffffff;
+  --bg-black: #000;
+  --header-height: 144px;
+  --header-padding: 90px;
+  --height-wrap: 80px;
+  --hover: rgb(202, 8, 241);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--main-color);
+  color: var(--txt-color);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: unset;
+  display: inline-block;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+#header {
+  height: var(--header-height);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--header-padding);
+  z-index: 99999999999;
+  transition: height 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+#header.shrink {
+  height: var(--height-wrap);
+  background-color: var(--second-color);
+}
+.nav-link {
+  color: rgb(156, 156, 156);
+}
+.navbar-nav .active {
+  color: white;
+}
+.nav-item :hover {
+  color: var(--hover) !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.login {
+  position: relative;
+}
+.login:hover .user {
+  display: block;
+}
+.user {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+.btn-danger:hover {
+  color: #fff !important;
+  background-color: #bb2d3b !important;
+  border-color: #b02a37;
+}
+.cart-quantity {
+  color: #242424;
+  background: #fdd835;
+  height: 20px;
+  left: 15px;
+  top: -2px;
+  border-radius: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  position: absolute;
+  padding: 0px 7px;
+}
+
+.form-control {
+  background-color: #eeeeee;
+  border: none;
+  border-radius: inherit;
+  transition: all 0.5s linear;
+}
+
+.banner {
+  height: 100vh;
+  padding-top: var(--header-height);
+  position: relative;
+}
+.slide-container {
+  height: 100%;
+  position: relative;
+}
+.banner .slide {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+}
+.slide-txt {
+  width: 42%;
+  padding-left: 60px;
+}
+.slide-title {
+  width: max-content;
+}
+.slide-title h3 {
+  font-size: 10rem;
+  color: var(--txt-white);
+  text-transform: capitalize;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  transform: translateX(-200px);
+  transition: transform 0.5s ease 0s;
+}
+.slide-description {
+  margin-top: 84px;
+}
+.slide-description p {
+  font-size: 1.4rem;
+  transition-delay: 0.3s;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  cursor: text;
+}
+.slide-btn {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  transition-delay: 0.2s;
+}
+.banner-btn {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  background-color: var(--txt-white);
+  color: var(--main-color);
+  transition: transform 0.3s ease 0s;
+}
+.banner-btn:hover {
+  transform: translateY(-10px);
+}
+.slide-img {
+  width: 58%;
+  padding: 40px;
+  z-index: 1;
+}
+.slide-img img {
+  width: 100%;
+  transform: rotate(-70deg);
+  transform-origin: bottom;
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.3, 0.79, 0.37, 1.05),
+    opacity 0.6s ease 0s;
+}
+.slide.active {
+  height: 100%;
+}
+.slide.active .slide-img img {
+  transform: rotate(0);
+  opacity: 1;
+  -webkit-box-reflect: below -30px;
+}
+.slide.active .slide-title h3 {
+  transform: translateX(0);
+}
+.slide.active .slide-description p {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide.active .slide-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+.banner-txt {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 11rem;
+  top: 220px;
+  right: -240px;
+  color: var(--second-color);
+  transform: rotate(-270deg);
+}
+.slide-control {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 98;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slide-control li {
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+}
+.slide-control li:hover {
+  color: var(--txt-white);
+}
+.slide-control-item {
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.slide-control .slide-prev,
+.slide-control .slide-next {
+  display: none;
+}
+.slide-control li.active {
+  transform: scale(1.5);
+  color: var(--txt-white);
+}
+.slide-control li {
+  margin-left: 30px;
+}
+.section {
+  padding: 12rem 0 0;
+}
+.section-title {
+  text-align: center;
+  position: relative;
+}
+.second-title {
+  font-size: 5rem;
+  color: var(--second-color);
+  position: absolute;
+  left: 24%;
+  bottom: 40%;
+  z-index: -1;
+  text-transform: uppercase;
+}
+.main-title {
+  font-size: 3.5rem;
+  z-index: 1;
+}
+.section-content {
+  padding: 7rem 7rem 0;
+}
+.category-img {
+  padding: 4rem;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.category-img-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  transition: transform 1s ease 0s;
+}
+.category-title {
+  font-weight: 700;
+  color: var(--txt-white);
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 1.75rem 1.75rem;
+  transition: ease 0.6s;
+}
+.category-title h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #e4e5e5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.category-img:hover .category-title {
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+.category-img:hover .category-title div {
+  height: 4px;
+  width: 100%;
+  animation: growth 0.5s linear forwards;
+}
+.category-img:hover .category-img-inner {
+  transform: scale(1.1);
+}
+.product-card,
+.product-2 {
+  border-radius: 10px;
+}
+.product-card {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease 0s;
+  overflow: hidden;
+}
+.product-card:hover {
+  background-color: #63ffa8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(215,768,357)'%3E%3Cstop offset='0' stop-color='%2363FFA8'/%3E%3Cstop offset='1' stop-color='%2313D7FF'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='745' height='620.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.product-card-img {
+  margin-bottom: 20px;
+}
+.product-name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.product-2:hover {
+  background-color: #ff5eec;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(215,768,357)'%3E%3Cstop offset='0' stop-color='%23FF5EEC'/%3E%3Cstop offset='1' stop-color='%23F5FF63'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='745' height='620.8' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.product-2 .add,
+.product-2 .view {
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.product-card:hover {
+  background-color: var(--bg-black);
+}
+.product-card:hover .add,
+.product-card:hover .view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-card-large .product-name {
+  font-size: 3rem;
+}
+.product-card-large .product-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--txt-white);
+  margin-bottom: 20px;
+  display: block;
+}
+.product-card-large .btn {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+.btn-wrapper {
+  position: absolute;
+  right: 7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.special-section {
+  position: relative;
+  margin-bottom: 290px;
+  padding-top: 4rem;
+}
+.discount {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  border-radius: 40px;
+  font-size: 30px;
+}
+
+.special-section .section-title {
+  text-align: right;
+  padding: 4rem 7rem;
+  background-color: var(--bg-black);
+}
+.special-section .second-title {
+  z-index: 999999999;
+  position: absolute;
+  font-size: 3.5rem;
+  color: var(--txt-white);
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.special-section .main-title {
+  font-size: 4rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+}
+.special-section .special-price {
+  font-size: 3rem;
+  color: var(--txt-white);
+  margin-bottom: 2rem;
+}
+.special-section .btn {
+  position: relative;
+  right: unset;
+  top: unset;
+  font-size: 2rem;
+}
+.special-section .special-img {
+  width: 50%;
+  position: absolute;
+  left: 7rem;
+  bottom: -290px;
+  transition: all 2s linear;
+}
+.news-card {
+  padding: 20px;
+  position: relative;
+}
+.news-card-img {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.img-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.img-wrapper img {
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.7s ease 0s;
+}
+.news-title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--txt-white);
+}
+.news-preview {
+  margin-bottom: 20px;
+}
+.news-card:hover img {
+  transform: scale(1.1);
+}
+
+.btn,
+.btn-hover {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--second-color);
+  color: var(--txt-white);
+  transition: all 0.3s ease 0s;
+  height: inherit;
+}
+.btn:hover {
+  background-color: var(--txt-white);
+  color: var(--main-color);
+}
+.btn-hover {
+  background-image: linear-gradient(
+    to left,
+    #fff 0%,
+    #fff 50%,
+    transparent 50%
+  );
+  background-size: 252%;
+  transition: all 0.3s linear;
+  border-radius: 4px;
+}
+
+.btn-hover:hover {
+  background-position: 100%;
+  color: #000000;
+}
+.to-header {
+  background: white;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.to-header.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+.footer-top {
+  padding: 3rem 0;
+  border-bottom: 1px solid #333;
+}
+.right,
+.left {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right img {
+  margin: 0 auto;
+}
+
+.widget {
+  display: flex;
+}
+.newsletter-info {
+  max-width: 350px;
+  width: 100%;
+}
+.widget-title {
+  margin: 0;
+  font-size: 14px;
+  color: var(--txt-white);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.newsletter-info p {
+  color: var(--second-color);
+  color: #d148e9;
+  font-size: 12px;
+  margin: 0;
+}
+.input-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  height: 40px;
+}
+.input-wrapper .form-control {
+  min-width: 40px;
+  width: 340px;
+  border-radius: 0;
+  background-color: #2c2c2c;
+  border: none;
+  display: block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #666;
+  box-shadow: none;
+  outline: 0;
+}
+.input-wrapper .btn {
+  flex: 1;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  border-color: #26b;
+  background-color: #26b;
+  font-size: 12px;
+}
+.input-wrapper .btn i {
+  font-size: 10px;
+  align-items: center;
+}
+.input-wrapper .btn-primary:hover {
+  border-color: #007bff;
+  background-color: #007bff;
+}
+.footer-middle {
+  padding: 3rem 0;
+  border-bottom: 1px solid #333;
+}
+.footer-middle .widget {
+  display: block;
+}
+.footer-middle .widget-title {
+  padding: 6px 0;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #ccc;
+}
+.widget-body {
+  list-style: none;
+  padding: 0;
+}
+.widget-body li {
+  line-height: 1.2;
+}
+.widget-body li label {
+  color: var(--white);
+  margin: 0;
+  font-size: 13px;
+}
+.widget-body li a {
+  color: #999;
+  font-size: 13px;
+}
+.widget-body li a:hover {
+  text-decoration: none;
+  color: var(--white);
+}
+.widget-body .col-3 {
+  padding: 5px 4px;
+}
+.widget-body .col-3 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.footer-bottom {
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  color: #666;
+  font-size: 12px;
+  position: relative;
+}
+
+.footer-bottom .social-links {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s linear;
+}
+.social-facebook:hover {
+  background: #3b5998;
+  border-color: #3b5998;
+}
+.social-twitter:hover {
+  background: #1da1f2;
+  border-color: #1da1f2;
+}
+.social-linkedin:hover {
+  background: #0073b2;
+  border-color: #0073b2;
+}
+.social-link {
+  margin: 0 1rem;
+  border-radius: 50%;
+  border: 1px solid #e1e1e1;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+  line-height: 30px;
+  text-align: center;
+  transition: color 0.4s linear, border 0.4s linear, background 0.4s linear;
+}
+
+@keyframes growth {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    background-color: #ffffff;
+    width: 20%;
+  }
+}
+.disabled {
+  display: none !important;
+}
